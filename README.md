@@ -11,13 +11,12 @@ And they'll probably come back to haunt me in a few years' time.
 <p>
 Feel free to find me on :<br>
 </p>
-- LinkedIn	: [rexyfahrezi][linkedin]
-- Github	: [rexyfahrezi][github]
-- Instagram	: [rexyfahrezi][instagram]
-- CTFTime	: [noid3a][ctf]
-- E-Mail	: <rexyfahrezi30@gmail.com> or <its.noid3a@gmail.com>
 
-[ctf]: https://ctftime.org/user/54508
-[linkedin]: https://www.linkedin.com/in/rexyfahrezi
-[github]: http://github.com/rexyfahrezi
-[instagram]: http://instagram.com/rexyfahrezi
+
+<ul>
+<li>LinkedIn&nbsp: <a href="https://www.linkedin.com/in/rexyfahrezi">rexyfahrezi</a></li>
+<li>Github&nbsp: <a href="http://github.com/rexyfahrezi">rexyfahrezi</a></li>
+<li>Instagram&nbsp: <a href="http://instagram.com/rexyfahrezi">rexyfahrezi</a></li>
+<li>CTFTime&nbsp: <a href="https://ctftime.org/user/54508">noid3a</a></li>
+<li>E-Mail&nbsp: <a href="mailto:rexyfahrezi30@gmail.com">rexyfahrezi30@gmail.com</a> or <a href="mailto:its.noid3a@gmail.com">its.noid3a@gmail.com</a></li>
+</ul> 
