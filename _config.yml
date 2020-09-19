@@ -1,0 +1,75 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Noid3a
+subtitle: I really have no idea about all of these.
+email: rexyfahrezi30@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Hi I'm Rexy Fahrezi, An Computer & Information Security Enthusiast.
+  Interested in computer & information security, cybersecurity and programming, I play CTF and I love detective-kinda things,
+  Currently learning on Security & Programming fields. 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://rexyfahrezi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: rexyfahrezi
+github_username:  rexyfahrezi
+instagram_username: rexyfahrezi
+copyright: Copyright © 2020 
+author: Rexy Fahrezi
+
+
+# Build settings
+theme: jekyll-theme-yat
+markdown: kramdown
+kmarkdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Google analytics
+google_analytics: UA-177196440-1
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+    - index.md
+    - categories.md
+    - about.md
+    
+# You can choose a theme color
+# Default theme colors as below:
+coolblack: #090a0b
+spacegrey: #353535
+snowwhite: #ffffff
+
+#theme_color: tes
+
+sitemap: false
