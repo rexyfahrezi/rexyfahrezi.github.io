@@ -3,7 +3,7 @@ layout: post
 title:  "Traverxec – [Hack The Box] Walkthrough"
 date:   2020-09-06 13:35:57 +0700
 categories: pentest
-tags: [Pentest]
+tags: [pentest]
 ---
 ![traverxec_banner](/assets/images/traverxec/banner.png "Traverxec Banner")
 ## Hack The Box?
