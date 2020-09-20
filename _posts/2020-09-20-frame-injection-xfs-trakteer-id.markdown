@@ -3,7 +3,7 @@ layout: post
 title:  "Cross-Frame Scripting (XFS) Pada Trakteer.id [Bug Bounty]"
 date:   2020-09-20 18:13:51 +0700
 categories: bug-bounty
-tags: [Bug Bounty]
+tags: [bug-bounty]
 ---
 
 ![trakteer_logo](https://trakteer.id/images/mix/navbar-logo-lite-beta.png "Trakteer.id")
