@@ -34,6 +34,7 @@ theme: jekyll-theme-yat
 markdown: kramdown
 kmarkdown:
   input: GFM
+  hard_wrap: false
 plugins:
   - jekyll-feed
   - jekyll-feed
