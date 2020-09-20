@@ -30,7 +30,6 @@ author: Rexy Fahrezi
 
 
 # Build settings
-theme: jekyll-theme-yat
 markdown: kramdown
 kmarkdown:
   input: GFM
