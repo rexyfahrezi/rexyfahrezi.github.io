@@ -56,7 +56,7 @@ Disclaimer : Saya menggunakan url “sciensec.github.io” (“Malicious web” 
 
 Berikut adalah demonstrasi pada device korban ketika profil penyerang di akses oleh korban :
 
-![](//https://youtu.be/onTkFCb1YcA)
+![xfs-trakteer-victim-device](https://img.youtube.com/vi/onTkFCb1YcA/0.jpg)](https://www.youtube.com/watch?v=onTkFCb1YcA)
 
 
 ## Impact
