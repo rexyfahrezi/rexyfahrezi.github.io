@@ -17,12 +17,5 @@ And they'll probably come back to haunt me in a few years' time.
 Feel free to find me on :<br>
 </p>
 - LinkedIn	: [rexyfahrezi][linkedin]
-- Github	: [rexyfahrezi][github]
-- Instagram	: [rexyfahrezi][instagram]
-- CTFTime	: [noid3a][ctf]
-- E-Mail	: <rexyfahrezi30@gmail.com> or <its.noid3a@gmail.com>
 
-[ctf]: https://ctftime.org/user/54508
 [linkedin]: https://www.linkedin.com/in/rexyfahrezi
-[github]: http://github.com/rexyfahrezi
-[instagram]: http://instagram.com/rexyfahrezi
