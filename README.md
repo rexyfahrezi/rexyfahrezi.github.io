@@ -15,8 +15,4 @@ Feel free to find me on :<br>
 
 <ul>
 <li>LinkedIn&nbsp: <a href="https://www.linkedin.com/in/rexyfahrezi">rexyfahrezi</a></li>
-<li>Github&nbsp: <a href="http://github.com/rexyfahrezi">rexyfahrezi</a></li>
-<li>Instagram&nbsp: <a href="http://instagram.com/rexyfahrezi">rexyfahrezi</a></li>
-<li>CTFTime&nbsp: <a href="https://ctftime.org/user/54508">noid3a</a></li>
-<li>E-Mail&nbsp: <a href="mailto:rexyfahrezi30@gmail.com">rexyfahrezi30@gmail.com</a> or <a href="mailto:its.noid3a@gmail.com">its.noid3a@gmail.com</a></li>
 </ul> 
