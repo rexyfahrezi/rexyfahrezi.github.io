@@ -2,10 +2,10 @@
 layout: post
 title:  "GEMASTIK 13 CTF [Write-up]"
 date:   2020-09-24 20:41:25 +0700
-categories: ctf
+categories: [security, ctf]
 tags: [ctf]
 ---
-![gemastik-logo](https://gemastik13.telkomuniversity.ac.id/dashboard/assets/images/Gemastik12-Logo-default.png "GEMASTIK 13")
+![gemastik-logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsTuaKBf4SMkgGqEwQwDyumT8kiXOD0stMw&s "GEMASTIK 13")
 ## GEMASTIK
 GEMASTIK atau Pagelaran Mahasiswa Nasional Bidang Teknologi Informasi dan Komunikasi, merupakan program Pusat Prestasi Nasional, Kementerian Pendidikan dan Kebudayaan.  
 
@@ -16,7 +16,7 @@ Berikut adalah writeup dari beberapa soal yang berhasil saya dan tim solve.
 ### Please Hack Me
 Diberikan sebuah page seperti berikut :
 
-![gemastik13-1](/assets/images/gemastik13/1.png)  
+![gemastik13-1](/assets/img/gemastik13/1.png)  
 
 Setelah dianalisis, intinya untuk mendapatkan flag kita harus memberikan token base64 yang berisi array yang sudah di serialize dan berisi username & password,   
 lalu server akan menerima token tersebut dan memasukkannya pada variable **<span>$data.</span>** **<span>$data</span>** tadi akan di hash lalu ada pengecekan dimana nilai dari **<span>$data['hmac']</span>** harus sama dengan **<span>\$data['admin_hash']</span>**  
@@ -33,11 +33,11 @@ echo base64_encode(serialize($data)); ?>
 
 **<span>$data[“hmac”]</span>** akan selalu sama nilainya dengan **<span>$data[“admin_hash”]</span>**, dan ketika dibandingkan memakai strict comparison (===) hasilnya akan sama. Jadi pemeriksaan **hmac** akan lolos.
 
-![gemastik13-2](/assets/images/gemastik13/2.png)  
+![gemastik13-2](/assets/img/gemastik13/2.png)  
 
 Lalu tinggal akses webnya dengan token yang sudah dibuat dan didapatkan flagnya.
 
-![gemastik13-3](/assets/images/gemastik13/3.png)  
+![gemastik13-3](/assets/img/gemastik13/3.png)  
 
 
 **Flag : gemastik13{B4ckr3ferenc3}**
@@ -46,7 +46,7 @@ Lalu tinggal akses webnya dengan token yang sudah dibuat dan didapatkan flagnya.
 Diberikan sebuah website yang hanya berisi text "information leakage on this website"  
 setelah dianalisis ternyata terdapat self signed cert pada web tersebut, ketika kita lihat detailnya
 
-![gemastik13-4](/assets/images/gemastik13/4.png)  
+![gemastik13-4](/assets/img/gemastik13/4.png)  
 
 Terdapat banyak informasi dari ssl certificate tersebut dan kami menemukan internal hostname di situ.  
 Langsung saja eksekusi dengan curl menggunakan internal hostname tersebut dan didapatkan flagnya.
@@ -55,7 +55,7 @@ Langsung saja eksekusi dengan curl menggunakan internal hostname tersebut dan di
 curl -k -H "host: break.hackmehackme.id" https://180.250.135.70/
 ```
 
-![gemastik13-5](/assets/images/gemastik13/5.png)  
+![gemastik13-5](/assets/img/gemastik13/5.png)  
 
 **Flag : gemastik13{s4mpaikan_saja_salamku_tuk_kekasihmu_y4ng_b4ru}**
 
@@ -65,34 +65,34 @@ curl -k -H "host: break.hackmehackme.id" https://180.250.135.70/
 ### Missing Something
 Diberikan file image seperti berikut,  
 
-![gemastik13-6](/assets/images/gemastik13/6.png)  
+![gemastik13-6](/assets/img/gemastik13/6.png)  
 
 kemudian lakukan analisis dengan tools online [https://magiceye.ecksdee.co.uk/](https://magiceye.ecksdee.co.uk/)
 
-![gemastik13-7](/assets/images/gemastik13/7.png)  
+![gemastik13-7](/assets/img/gemastik13/7.png)  
 
 dan didapatkan flag yang sedikit kurang jelas, lalu kami coba perjelas dengan stegsolve.
 
-![gemastik13-8](/assets/images/gemastik13/8.png)  
+![gemastik13-8](/assets/img/gemastik13/8.png)  
 
 Flag pun terlihat lumayan jelas:  
 
-![gemastik13-9](/assets/images/gemastik13/9.png)  
+![gemastik13-9](/assets/img/gemastik13/9.png)  
 
 **Flag : gemastik13{P4nd3m1C_m4k3s_m3\_stay_@\_H0m4}**
 
 ### AH↓HA↑HA↑HA↑HA↑
 Diberikan file wav, lalu kami analisis dengan audacity :
 
-![gemastik13-10](/assets/images/gemastik13/10.png)  
+![gemastik13-10](/assets/img/gemastik13/10.png)  
 
 setelah itu kami coba split stereo track :
 
-![gemastik13-11](/assets/images/gemastik13/11.png)  
+![gemastik13-11](/assets/img/gemastik13/11.png)  
 
 kami berasumsi ini adalah SSTV, klik tanda silang yang atas dan play yang bawah dan record output menggunakan robot36 :
 
-![gemastik13-12](/assets/images/gemastik13/12.png)  
+![gemastik13-12](/assets/img/gemastik13/12.png)  
 
 Benar saja, flag pun berhasil didapatkan.
 
@@ -103,13 +103,13 @@ Benar saja, flag pun berhasil didapatkan.
 ### Congratulations
 Diberikan sebuah file png yang corrupt, kami coba analisis dengan pngcheck dan terdapat error :
 
-![gemastik13-13](/assets/images/gemastik13/13.png)  
+![gemastik13-13](/assets/img/gemastik13/13.png)  
 
 kemudian kami asumsikan pngchunk, dan untuk recover png ini kita harus melakukan correction pada IHDR, sRGB, pHYs, dan IDAT. 
 Solve dengan script berikut :
 
-![gemastik13-14](/assets/images/gemastik13/14.png)  
-![gemastik13-15](/assets/images/gemastik13/15.png)  
+![gemastik13-14](/assets/img/gemastik13/14.png)  
+![gemastik13-15](/assets/img/gemastik13/15.png)  
 
 Flag pun berhasil didapatkan.
 
@@ -123,13 +123,13 @@ Tujuan soal ini adalah mencari potongan-potongan flag sesuai dengan instruksi da
 Pada announcement di discord gemastik didapatkan direct link dan hasilnya kami di arahkan menuju sebuah grup WhatsApp. Deskripsi di grup WA tadi kami diberikan sebuah petunjuk berikutnya sekaligus pecahan pertama.  
 **Pecahan Pertama : BeRsamA**
 
-![gemastik13-16](/assets/images/gemastik13/16.png)  
+![gemastik13-16](/assets/img/gemastik13/16.png)  
 
 **Potongan Kedua**  
 Setelah mendownload file dari google drive tadi, di dalam file tersebut terdapat zip yang dikunci, dan pdf yang berisi text berwarna putih. Didapatkan pecahan kedua sekaligus petunjuk untuk pecahan selanjutnya pada pdf tersebut.  
 **Pecahan Kedua : beRJuANG**
 
-![gemastik13-16](/assets/images/gemastik13/17.png)  
+![gemastik13-16](/assets/img/gemastik13/17.png)  
 
 **Potongan Ketiga**  
 Extract zip dengan password yang didapatkan, terdapat private key bernama myPrivate.ppk yang di generate dari PuTTYGen. Lalu convert menjadi openssh key dan connect ke ssh nya dengan user gema@180.250.135.6 dan menggunakan private key yang sudah diconvert tadi.  
@@ -144,12 +144,12 @@ Base64 berisi link grup telegram, lalu ada kunci.db pada /folder7/kunci.db yang 
 base64 decode UmFpaA== di kunci.db : Raih  
 **Pecahan Ketiga : Raih**  
 
-![gemastik13-18](/assets/images/gemastik13/18.png)  
+![gemastik13-18](/assets/img/gemastik13/18.png)  
 
 **Potongan Keempat**  
 Decode link telegram (dapat link telegram dari hehe.txt isinya dump dari bash history, ada base64 lalu di decode dapat link telegram). Tadinya disini tidak ada apa-apa namun setelah beberapa jam base64 dari potongan flag ke 4 ditaruh pada deskripsi grup (mungkin adminnya lupa hehe).  
 **Pecahan Keempat : keMENANGan**  
 
-![gemastik13-19](/assets/images/gemastik13/19.png)  
+![gemastik13-19](/assets/img/gemastik13/19.png)  
 
 **Final Flag : gemastik13{BeRsamA_beRJuANG_Raih_keMENANGan}**

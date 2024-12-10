@@ -2,7 +2,7 @@
 layout: post
 title:  "Cross-Frame Scripting (XFS) Pada Trakteer.id [Bug Bounty]"
 date:   2020-09-20 18:13:51 +0700
-categories: bug-bounty
+categories: [security, bug bounty]
 tags: [bug-bounty]
 ---
 
@@ -35,23 +35,23 @@ Nah sekarang saya akan mencoba untuk melakukan serangan dengan skenario seperti 
 - Pergi ke "My Page", klik "Edit Video"
 - Masukkan URL Youtube yang valid
 - Intercept Request
-![xfs-trakteer-1](/assets/images/trakteer/1.png)  
+![xfs-trakteer-1](/assets/img/trakteer/1.png)  
 
 - Rubah “video_url“ ke url malicious web yang sudah dibuat oleh *attacker*
-![xfs-trakteer-1](/assets/images/trakteer/2.png)  
+![xfs-trakteer-1](/assets/img/trakteer/2.png)  
 
 - Berikut adalah response yang diterima
-![xfs-trakteer-1](/assets/images/trakteer/3.png)  
+![xfs-trakteer-1](/assets/img/trakteer/3.png)  
 
 - Url berhasil di upload dan page akan melakukan redirect
 - Untuk membuktikannya, pergi ke halaman Profile atau “View Page”
-![xfs-trakteer-1](/assets/images/trakteer/4.png)  
+![xfs-trakteer-1](/assets/img/trakteer/4.png)  
 
 - Saat profil trakteer terbuka (trakteer.id/kirakira), maka secara otomatis “malicious web” milik si *“attacker”* pun ter-load pada iframe **"about"** dan akan mendownload “evil.exe” yang telah disisipi pada web si *"attacker"*.
-![xfs-trakteer-1](/assets/images/trakteer/5.png)  
+![xfs-trakteer-1](/assets/img/trakteer/5.png)  
 
 - Berikut isi script pada malicious web *attacker*
-![xfs-trakteer-1](/assets/images/trakteer/6.png)  
+![xfs-trakteer-1](/assets/img/trakteer/6.png)  
 Disclaimer : Saya menggunakan url “sciensec.github.io” (“Malicious web” yang saya buat) hanya sebagai contoh untuk membuktikan impact dari bug ini.  
 
 Berikut adalah demonstrasi pada device korban ketika profil penyerang di akses oleh korban :
