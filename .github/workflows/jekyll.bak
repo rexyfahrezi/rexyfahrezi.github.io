@@ -1,0 +1,2 @@
+name: npm build
+run: npm install && npm run build
